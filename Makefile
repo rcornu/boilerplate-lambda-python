@@ -1,10 +1,6 @@
-.DEFAULT: help
+all: test
 
-help:
-	@echo "clean\t- remove all build, test Python artifacts"
-	@echo "install\t- install the requirements locally"
-
-install:
+package:
 	pip3 install -r requirements.txt -t .
 
 test: flake unittest clean
