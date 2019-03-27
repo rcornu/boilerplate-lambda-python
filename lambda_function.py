@@ -6,7 +6,8 @@ __author__ = "Romain CORNU"
 __version__ = "0.1.0"
 
 
-logging.basicConfig(level=logging.DEBUG)
+LOGLEVEL = os.environ.get('LOGLEVEL', 'WARNING').upper()
+logging.basicConfig(level=LOGLEVEL)
 
 
 def lambda_handler(event, context):
