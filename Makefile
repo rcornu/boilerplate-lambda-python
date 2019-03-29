@@ -1,7 +1,9 @@
 all: test
 
 package:
-	pip3 install -r requirements.txt -t .
+	mkdir -p build
+	cp *.py build/
+	pip3 install -r requirements.txt -t build
 
 test: flake unittest clean
 
